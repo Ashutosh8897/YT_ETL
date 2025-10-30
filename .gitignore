@@ -3,3 +3,6 @@
 
 #ignore caching file
 __pycache__/
+
+#ignore .env file
+.env/
