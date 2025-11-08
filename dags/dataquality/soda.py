@@ -6,7 +6,7 @@ logger = logging.getLogger(__name__)
 SODA_PATH = "/opt/airflow/include/soda"
 DATASOURCE = "pg_datasource"
 
-def yt_elt_data_qualtiy(schema):
+def yt_elt_data_quality(schema):
     try:
         task = BashOperator(
             task_id = f"sode_test_{schema}",
@@ -16,3 +16,4 @@ def yt_elt_data_qualtiy(schema):
     except Exception as e:
         logger.error(f"Error running data quality check for schema: {schema}")
         raise e
+    yt_elt_data_quality
